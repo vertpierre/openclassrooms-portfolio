@@ -3,7 +3,7 @@ import type { Project, AboutData } from "../interfaces";
 export const aboutData: AboutData = {
 	name: "Pierre Roussel",
 	introduction:
-		"Hello, je suis Dévelopeur et Designer. Diplômé en graphisme, et en motion à Gobelins, puis d'une formation en développement web, je crée des sites web dynamiques en dialogue avec le design graphique.",
+		"Hello, je suis Développeur et Designer. Diplômé en graphisme et en motion à Gobelins, puis en développement web, je crée des sites web dynamiques en dialogue avec le design graphique.",
 	description:
 		"Diplômé en Design Graphique & Numérique, en Motion Design à Gobelins, puis d'une formation en Développement Web frontend et backend. Je m'intéresse autant aux supports imprimés qu'aux médias numérique, avec la conception de sites web et une approche du design graphique en dialogue avec le numérique.",
 	additionalInfo:
