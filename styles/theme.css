@@ -1,0 +1,36 @@
+html {
+	color: var(--color-primary);
+	border-color: var(--color-primary-dimmed);
+	outline-color: var(--color-primary-dimmed);
+	background-color: var(--color-secondary);
+}
+
+* {
+	transition: background-color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+	font-family: var(--default-font);
+}
+
+hr {
+	color: var(--color-primary-dimmed);
+}
+
+a[target="_blank"] {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: calc(var(--default-title-size) * 2.4);
+	line-height: 1.1;
+	font-family: var(--default-title-font);
+}
+
+h3,
+h4,
+span,
+a,
+p {
+	font-size: var(--default-font-size);
+}

@@ -1,0 +1,40 @@
+@font-face {
+	font-family: InterVariable;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("../public/fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+	font-family: InterVariable;
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("../public/fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "BIZ";
+	font-display: swap;
+	src: url("../public/fonts/BIZUDPMincho-Regular.ttf");
+}
+
+:root {
+	--default: calc(0.6rem + 0.4vw + 0.4vh);
+	--default-space: var(--default);
+
+	--default-title-font: "BIZ", Garamond, Georgia, Times, serif;
+	--default-font: "InterVariable", Helvetica, sans-serif;
+	--default-font-size: max(calc(0.6rem + 0.3vw + 0.3vh), 1rem);
+	--default-title-size: var(--default);
+
+	--color-primary: hsl(0, 0%, 10%);
+	--color-primary-dimmed: hsla(0, 0%, 10%, 0.2);
+	--background-primary-checker: repeating-conic-gradient(
+			var(--color-primary-dimmed) 0 90deg,
+			transparent 90deg 180deg
+		)
+		0 0 / 12px 12px;
+	--color-secondary: hsl(0, 0%, 90%);
+	--border-radius: calc(var(--default-space) / 4);
+}

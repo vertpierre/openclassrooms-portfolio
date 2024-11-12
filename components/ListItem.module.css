@@ -1,0 +1,40 @@
+.card {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: var(--border-radius);
+	position: relative;
+}
+
+.aspectRatioBox {
+	width: 100%;
+	position: relative;
+	aspect-ratio: 16 / 9;
+}
+
+.card {
+	object-fit: cover;
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: flex-end;
+	padding: calc(var(--default-space) / 2);
+	transition: background 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.card:hover .overlay {
+	background: var(--background-primary-checker);
+}
+
+.title {
+	color: transparent;
+	mix-blend-mode: difference;
+}
+
+.card:hover .title {
+	color: white;
+}

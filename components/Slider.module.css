@@ -1,0 +1,109 @@
+.containerGallery {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.gallery {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	border-radius: var(--border-radius);
+	aspect-ratio: 16 / 10;
+	background: var(--background-primary-checker);
+}
+
+.gliderTrack {
+	display: flex;
+	transition: transform 0.6s cubic-bezier(0.2, 0.4, 0.2, 1);
+	width: 100%;
+	height: 100%;
+}
+
+.frame {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+}
+
+.image {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--border-radius);
+}
+
+.galleryNav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: min-content;
+	gap: calc(var(--default-font-size) / 2);
+}
+
+.galleryPrev,
+.galleryNext {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: calc(var(--default-font-size) * 1.4);
+	font-weight: 300;
+}
+
+.dots {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--default-font-size) / 4);
+}
+
+.gliderDot {
+	width: calc(var(--default-font-size) * 1.2);
+	padding: calc(var(--default-font-size) / 2) calc(var(--default-font-size) / 8);
+	cursor: pointer;
+}
+
+.gliderDot::after {
+	position: relative;
+	content: "";
+	display: block;
+	width: var(--default-font-size);
+	height: 2px;
+	background-color: var(--color-primary-dimmed);
+	transition: background-color 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.gliderDot.active::after {
+	background-color: var(--color-primary);
+}
+
+/* Add mobile styles */
+@media (max-width: 800px) {
+	.gallery {
+		aspect-ratio: auto;
+		height: auto;
+		overflow: visible;
+	}
+
+	.gliderTrack {
+		flex-direction: column;
+		transform: none !important; /* Override the transform from JS */
+		gap: var(--default-space);
+		margin: 0;
+	}
+
+	.frame {
+		flex: 0 0 auto;
+	}
+
+	.frame img {
+		object-fit: cover;
+	}
+
+	.galleryNav {
+		display: none; /* Hide navigation on mobile */
+	}
+}

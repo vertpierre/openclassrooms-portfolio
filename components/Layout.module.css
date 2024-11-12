@@ -1,0 +1,29 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	padding-block: calc(var(--default-space) / 2);
+	padding-inline: var(--default-space);
+}
+
+.nav {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: var(--default-space);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	padding-inline: var(--default-space);
+	padding-top: calc(var(--default-space) * 4);
+	padding-bottom: var(--default-space);
+	min-height: 100vh;
+	height: 100vh;
+	gap: 0;
+}

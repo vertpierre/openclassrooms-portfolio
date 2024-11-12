@@ -1,0 +1,5 @@
+.pageSocialList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--default-space);
+}

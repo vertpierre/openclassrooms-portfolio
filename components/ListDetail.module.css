@@ -1,0 +1,22 @@
+.listDetailItem {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 4ch;
+}
+
+.listDetailItem > *:first-child {
+	min-width: 10ch;
+	font-family: var(--font-mono);
+}
+
+.listDetailItem > *:last-child {
+	flex: 1;
+}
+
+.listDetailDate {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: var(--default-space);
+}

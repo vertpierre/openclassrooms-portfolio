@@ -1,0 +1,42 @@
+.grid {
+	display: flex;
+	width: 100%;
+	gap: var(--default-space);
+	margin-top: calc(var(--default-space) * 2);
+	padding-bottom: calc(var(--default-space) * 8);
+	--columns: 3;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: var(--default-space);
+	width: calc(100% / var(--columns));
+}
+
+.column > * {
+	transition: transform 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.column > *:hover {
+	transform: scale(1.01);
+}
+
+/* 2 columns for medium screens */
+@media (max-width: 1200px) {
+	.grid {
+		--columns: 2;
+	}
+}
+
+/* 1 column for mobile */
+@media (max-width: 800px) {
+	.grid {
+		flex-direction: column;
+		--columns: 1;
+	}
+
+	.column {
+		width: 100%;
+	}
+}

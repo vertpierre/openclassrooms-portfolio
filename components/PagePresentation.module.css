@@ -1,0 +1,28 @@
+.pagePresentation {
+	display: flex;
+	gap: var(--default-font-size);
+	width: fit-content;
+	height: fit-content;
+}
+
+.pagePresentation > * {
+	max-width: 50ch;
+}
+
+.pagePresentation.row {
+	flex-direction: row;
+}
+
+.pagePresentation.row > * {
+	flex: 1;
+}
+
+.pagePresentation.column {
+	flex-direction: column;
+}
+
+@media (max-width: 800px) {
+	.pagePresentation {
+		flex-direction: column !important;
+	}
+}
