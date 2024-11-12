@@ -93,6 +93,7 @@
 		transform: none !important; /* Override the transform from JS */
 		gap: var(--default-space);
 		margin: 0;
+		margin-bottom: calc(var(--default-space) * 4);
 	}
 
 	.frame {
