@@ -1,4 +1,4 @@
-import styles from "./PageTitle.module.css"; // Create this CSS module for styling
+import styles from "./PageTitle.module.css";
 
 interface PageTitleProps {
 	title: string;
