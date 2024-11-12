@@ -22,7 +22,7 @@ export const sampleProjectData: Project[] = [
 			end: "février 2021",
 		},
 		description:
-			"Ce site web a été cr��é à l'occasion des Journées portes ouvertes des sections DNMADE et DSAA du Lycée Jacques Prévert à Boulogne.",
+			"Ce site web a été créé à l'occasion des Journées portes ouvertes des sections DNMADE et DSAA du Lycée Jacques Prévert à Boulogne.",
 		additionalInfo:
 			"Projet collaboratif réalisé en 5 jours avec Louanne Fournier et Élisa Gandon. Interface épurée basée sur une couleur unique pour mettre en avant les visuels. Collaboration via Git. Le site sert toujours de base pour les portes ouvertes du DNMADE.",
 		images: [],
