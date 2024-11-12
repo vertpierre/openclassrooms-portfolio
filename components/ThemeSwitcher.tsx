@@ -5,7 +5,7 @@ const ThemeSwitcher = () => {
 	const [isDark, setIsDark] = useState(false);
 	const [hue, setHue] = useState(232);
 	const [hueInvert, setHueInvert] = useState(52);
-	const [saturation, setSaturation] = useState(100);
+	const [saturation, setSaturation] = useState(0);
 	const [luminosityLight, setLuminosityLight] = useState(90);
 	const [luminosityDark, setLuminosityDark] = useState(10);
 
@@ -100,7 +100,7 @@ const ThemeSwitcher = () => {
 	};
 
 	useEffect(() => {
-		// Load theme from localStorage
+		// Load theme from localStorage or use default values
 		const savedTheme = localStorage.getItem("theme");
 		if (savedTheme) {
 			const theme = JSON.parse(savedTheme);
@@ -118,8 +118,11 @@ const ThemeSwitcher = () => {
 				theme.luminosityDark,
 				theme.isDark,
 			);
+		} else {
+			// If no saved theme, apply default grayscale theme
+			updateThemeColors(hue, hueInvert, 0, luminosityLight, luminosityDark, isDark);
 		}
-	}, [updateThemeColors]);
+	}, [updateThemeColors, hue, hueInvert, luminosityLight, luminosityDark, isDark]);
 
 	return (
 		<div className={styles.container}>
