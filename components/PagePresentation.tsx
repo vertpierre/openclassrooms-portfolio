@@ -19,7 +19,7 @@ const PagePresentation = ({
 		<p>
 			{additionalInfo}
 			{showCV && (
-				<Link href="./public/cv.pdf" target="_blank" rel="noreferrer">
+				<Link href="/cv.pdf" target="_blank" rel="noreferrer">
 					CV.
 				</Link>
 			)}
