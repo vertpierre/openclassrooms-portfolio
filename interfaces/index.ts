@@ -1,11 +1,5 @@
-// You can include shared interfaces/types in a separate file
-// and then use them in any component by importing them. For
-// example, to import the interface below do:
-//
-// import { User } from 'path/to/interfaces';
-
 export interface Project {
-	id: number;
+	id: string;
 	title: string;
 	slug: string;
 	tools: string[];
@@ -21,4 +15,11 @@ export interface Project {
 		alt: string;
 		id: string;
 	}[];
+}
+
+export interface AboutData {
+	name: string;
+	introduction: string;
+	description: string;
+	additionalInfo: string;
 }

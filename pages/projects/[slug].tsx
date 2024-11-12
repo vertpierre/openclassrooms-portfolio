@@ -7,7 +7,7 @@ import PageContent from "../../components/ProjectContent";
 import { generateProjectImages } from "../../utils/imageUtils";
 
 type Props = {
-	item?: Project & { images?: string[] };
+	item?: Project & { images?: { src: string; alt: string; id: string }[] };
 };
 
 const ProjectDetailPage = ({ item }: Props) => {
@@ -47,13 +47,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}
 
 	const images = await generateProjectImages(item.slug);
-	const imagePaths = images.map((img) => img.src);
+	
+	// Map images to include src, alt, and unique id
+	const imageData = images.map((img, index) => ({
+		src: img.src,
+		alt: `${item.title} - Image ${index + 1}`,
+		id: `${item.slug}-image-${index}`,
+	}));
 
 	return {
 		props: {
 			item: {
 				...item,
-				images: imagePaths,
+				images: imageData, // Updated to include objects with src, alt, id
 			},
 		},
 	};

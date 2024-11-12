@@ -1,5 +1,7 @@
-import { readdir, existsSync } from "node:fs";
-import { join } from "node:path";
+// biome-ignore lint: 
+import { readdir, existsSync } from "fs";
+// biome-ignore lint: 
+import { join } from "path";
 
 interface ImageData {
 	src: string;

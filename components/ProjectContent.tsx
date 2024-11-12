@@ -18,12 +18,7 @@ const PageContent = ({
 	showCV,
 	item,
 }: PageContentProps) => {
-	const images =
-		item?.images?.map((src, index) => ({
-			src: src,
-			alt: `${item.title} - Image ${index + 1}`,
-			id: `${item.slug}-image-${index}`,
-		})) || [];
+	const images = item?.images || [];
 
 	return (
 		<div className={styles.container}>
