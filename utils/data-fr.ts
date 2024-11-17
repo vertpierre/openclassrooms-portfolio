@@ -24,7 +24,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Ce site web a été créé à l'occasion des Journées portes ouvertes des sections DNMADE et DSAA du Lycée Jacques Prévert à Boulogne.",
 		additionalInfo:
-			"Projet collaboratif réalisé en 5 jours avec Louanne Fournier et Élisa Gandon. Interface épurée basée sur une couleur unique pour mettre en avant les visuels. Collaboration via Git. Le site sert toujours de base pour les portes ouvertes du DNMADE.",
+			"Projet collaboratif réalisé en 5 jours avec Louanne Fournier et Élisa Gandon. Interface épurée basée sur une couleur unique pour mettre en avant les visuels. Collaboration via Git. Le site sert toujours de base pour les portes ouvertes du DNMADE.\n\n[visiter la page github](https://github.com/vertpierre/jpo_dnmade_prevert), [visiter le site](https://vertpierre.com/websites/jpo_dnmade_prevert/)",
 		images: [],
 	},
 	{
@@ -49,7 +49,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Le projet MADE est un projet visant à créer un dispositif graphique, portant sur des réflexions ou des sujets abordées lors du mémoire sur le logiciel libre.",
 		additionalInfo:
-			"Workshop et site web dédié aux outils de création libre, visant à améliorer leur compréhension et présentation. Création d'une identité visuelle et supports de médiation. Premier workshop réalisé autour du motion design.",
+			"Workshop et site web dédié aux outils de création libre, visant à améliorer leur compréhension et présentation. Création d'une identité visuelle et supports de médiation. Premier workshop réalisé autour du motion design.\n\n[visiter la page github](https://github.com/vertpierre/projet_made), [visiter le site](https://vertpierre.com/websites/projet_made/)",
 		images: [],
 	},
 	{
@@ -65,7 +65,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Conception d'une application web pour la présentation d'une nouvelle typographie développée par le studio baldinger-vuhuu.",
 		additionalInfo:
-			"Application web interactive permettant d'explorer les glyphes de la typographie Dina Chaumont Display de manière dynamique. Intégration de motion design avec Anime.js pour créer une expérience utilisateur immersive.",
+			"Application web interactive permettant d'explorer les glyphes de la typographie Dina Chaumont Display de manière dynamique. Intégration de motion design avec Anime.js pour créer une expérience utilisateur immersive dans la compréhension de la typographie.\n\n[visiter le site](https://play-with-dina.bvhtype.com/)",
 		images: [],
 	},
 	{
@@ -81,7 +81,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Conception du design et développement frontend et backend d'un site portfolio pour Le Grand Garçon.",
 		additionalInfo:
-			"Développement d'un CMS léger en PHP pour un site portfolio mettant en avant le travail de Michaël Isler. Système de mise à jour simplifié basé sur un dossier d'images et un fichier texte.",
+			"Développement d'un CMS léger en PHP pour un site portfolio mettant en avant le travail de Michaël Isler. Système de CMS simplifié basé sur un dossier d'images et un fichier texte.\n\n[visiter le site](https://legrandgarcon.com/)",
 		images: [],
 	},
 	{
@@ -97,7 +97,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Création d'une page web dynamique pour le site de l'architecte d'intérieur Sophie Bluel, incluant la gestion des événements utilisateurs et la manipulation du DOM.",
 		additionalInfo:
-			"Site développé en JavaScript Vanilla avec gestion des événements utilisateurs et manipulation du DOM. Intégration d'une API REST, système d'authentification et modale d'upload, le tout en respectant les normes d'accessibilité.",
+			"Site développé en JavaScript Vanilla avec gestion des événements utilisateurs et manipulation du DOM. Intégration d'une API REST, système d'authentification et modale d'upload, le tout en respectant les normes d'accessibilité.\n\n[visiter la page github](https://github.com/vertpierre/openclassrooms-portfolio-architecte-sophie-bluel)",
 		images: [],
 	},
 	{
@@ -113,7 +113,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Développement d'une application web de location immobilière moderne et réactive avec React et React Router, basée sur des maquettes fournies.",
 		additionalInfo:
-			"Application React avec React Router et animations CSS/SASS. Focus sur les composants réutilisables et l'architecture de routage. Utilisation de données JSON simulées pour une expérience utilisateur fluide.",
+			"Application React avec React Router et animations CSS/SASS. Focus sur les composants réutilisables et l'architecture de routage. Utilisation de données JSON simulées pour une expérience utilisateur fluide.\n\n[visiter la page github](https://github.com/vertpierre/openclassrooms-kasa/), [visiter le site](https://openclassrooms-kasa-vertpierre.vercel.app/)",
 		images: [],
 	},
 	{
@@ -129,7 +129,7 @@ export const sampleProjectData: Project[] = [
 		description:
 			"Développement du backend et frontend d'un site de notation de livres pour une chaîne de librairies lilloise, incluant un système d'authentification et une gestion optimisée des images.",
 		additionalInfo:
-			"API REST avec Express et MongoDB, système CRUD complet pour la gestion des livres et notations. Architecture MVC, optimisation des images et sécurité des données selon les principes du Green Code.",
+			"API REST avec Express et MongoDB, système CRUD complet pour la gestion des livres et notations. Architecture MVC, optimisation des images et sécurité des données selon les principes du Green Code.\n\n[visiter la page github (frontend)](https://github.com/vertpierre/openclassrooms-frontend-book-rating/), [visiter la page github (backend)](https://github.com/vertpierre/openclassrooms-backend-book-rating/)",
 		images: [],
 	},
 ];

@@ -15,6 +15,10 @@ export interface Project {
 		alt: string;
 		id: string;
 	}[];
+	links?: {
+		text: string;
+		url: string;
+	}[];
 }
 
 export interface AboutData {
