@@ -120,9 +120,23 @@ const ThemeSwitcher = () => {
 			);
 		} else {
 			// If no saved theme, apply default grayscale theme
-			updateThemeColors(hue, hueInvert, 0, luminosityLight, luminosityDark, isDark);
+			updateThemeColors(
+				hue,
+				hueInvert,
+				0,
+				luminosityLight,
+				luminosityDark,
+				isDark,
+			);
 		}
-	}, [updateThemeColors, hue, hueInvert, luminosityLight, luminosityDark, isDark]);
+	}, [
+		updateThemeColors,
+		hue,
+		hueInvert,
+		luminosityLight,
+		luminosityDark,
+		isDark,
+	]);
 
 	return (
 		<div className={styles.container}>

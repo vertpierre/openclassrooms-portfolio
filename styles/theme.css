@@ -1,12 +1,12 @@
 html {
-  color: var(--color-primary);
-  border-color: var(--color-primary-dimmed);
-  outline-color: var(--color-primary-dimmed);
-  background-color: var(--color-secondary);
+	color: var(--color-primary);
+	border-color: var(--color-primary-dimmed);
+	outline-color: var(--color-primary-dimmed);
+	background-color: var(--color-secondary);
 }
 
 * {
-  transition: background-color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+	transition: background-color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 button,
@@ -14,34 +14,34 @@ input,
 textarea,
 select,
 hr {
-  border: none;
+	border: none;
 }
 
 body {
-  font-family: var(--default-font);
+	font-family: var(--default-font);
 }
 
 hr {
-  border-bottom: 1px solid var(--color-primary-dimmed);
+	border-bottom: 1px solid var(--color-primary-dimmed);
 }
 
 a[target="_blank"] {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 a {
-  opacity: 1;
-  transition: opacity 0.2s ease;
+	opacity: 1;
+	transition: opacity 0.2s ease;
 }
 
 a:not([class*="card"]):hover {
-  opacity: 0.6;
+	opacity: 0.6;
 }
 
 h1 {
-  font-size: calc(var(--default-title-size) * 2.4);
-  line-height: 1.1;
-  font-family: var(--default-title-font);
+	font-size: calc(var(--default-title-size) * 2.4);
+	line-height: 1.1;
+	font-family: var(--default-title-font);
 }
 
 h3,
@@ -49,5 +49,5 @@ h4,
 span,
 a,
 p {
-  font-size: var(--default-font-size);
+	font-size: var(--default-font-size);
 }

@@ -7,6 +7,10 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import BackdropBlur from "./BackdropBlur";
 import PageTransition from "./PageTransition";
 import type { CSSProperties } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "../contexts/LanguageContext";
+import { navigationLabels as navFr } from "../utils/data-fr";
+import { navigationLabels as navEn } from "../utils/data-en";
 
 interface Props {
 	children?: ReactNode;
@@ -19,6 +23,8 @@ const Layout = ({
 	title = "pierre",
 	baseTitle = "pierre",
 }: Props) => {
+	const { language } = useLanguage();
+	const nav = language === "fr" ? navFr : navEn;
 	const [scrollPixels, setScrollPixels] = useState(0);
 	const [isMounted, setIsMounted] = useState(false);
 
@@ -77,10 +83,13 @@ const Layout = ({
 			</Head>
 			<header className={styles.header}>
 				<nav className={styles.nav}>
-					<Link href="/">{title === "pierre" ? "pierre roussel" : "accueil"}</Link>
-					<Link href="/about">à propos</Link>
+					<Link href="/">{title === "pierre" ? "pierre roussel" : nav.home}</Link>
+					<Link href="/about">{nav.about}</Link>
 				</nav>
-				<ThemeSwitcher />
+				<div className={styles.controls}>
+					<LanguageSwitcher />
+					<ThemeSwitcher />
+				</div>
 			</header>
 			<PageTransition>
 				<div className={styles.content} style={contentStyle}>

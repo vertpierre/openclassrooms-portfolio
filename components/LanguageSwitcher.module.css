@@ -1,0 +1,7 @@
+.languageButton {
+	opacity: 1;
+}
+
+.languageButton:hover {
+	opacity: 0.6;
+}
