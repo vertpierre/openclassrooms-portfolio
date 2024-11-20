@@ -1,16 +1,24 @@
 import Layout from "../components/Layout";
 import AboutContent from "../components/AboutContent";
 import { useLanguage } from "../contexts/LanguageContext";
-import { aboutData as aboutDataFr } from "../utils/data-fr";
-import { aboutData as aboutDataEn } from "../utils/data-en";
+import {
+	aboutData as aboutDataFr,
+	navigationLabels as navFr,
+} from "../utils/data-fr";
+import {
+	aboutData as aboutDataEn,
+	navigationLabels as navEn,
+} from "../utils/data-en";
+import { baseTitle } from "../utils/data-common";
 import PageTitle from "../components/PageTitle";
 
 const AboutPage = () => {
 	const { language } = useLanguage();
 	const aboutData = language === "fr" ? aboutDataFr : aboutDataEn;
+	const nav = language === "fr" ? navFr : navEn;
 
 	return (
-		<Layout title="à propos" baseTitle="pierre">
+		<Layout title={nav.about} baseTitle={baseTitle}>
 			<PageTitle title={aboutData.name} />
 			<AboutContent
 				description={aboutData.description}

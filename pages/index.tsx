@@ -3,6 +3,7 @@ import type { GetStaticProps } from "next";
 
 import type { Project } from "../interfaces";
 import { useLanguage } from "../contexts/LanguageContext";
+import { baseTitle } from "../utils/data-common";
 import {
 	aboutData as aboutDataFr,
 	sampleProjectData as projectDataFr,
@@ -23,7 +24,7 @@ const IndexPage = ({ items }: Props) => {
 	const projectData = language === "fr" ? projectDataFr : projectDataEn;
 
 	return (
-		<Layout title="pierre" baseTitle="pierre">
+		<Layout title={baseTitle} baseTitle={baseTitle}>
 			<h1>{aboutData.introduction}</h1>
 			<List items={projectData} />
 		</Layout>

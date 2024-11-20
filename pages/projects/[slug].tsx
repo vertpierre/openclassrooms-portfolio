@@ -1,12 +1,19 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import type { Project } from "../../interfaces";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { sampleProjectData as projectDataFr } from "../../utils/data-fr";
-import { sampleProjectData as projectDataEn } from "../../utils/data-en";
+import {
+	sampleProjectData as projectDataFr,
+	navigationLabels as navFr,
+} from "../../utils/data-fr";
+import {
+	sampleProjectData as projectDataEn,
+	navigationLabels as navEn,
+} from "../../utils/data-en";
 import Layout from "../../components/Layout";
 import PageTitle from "../../components/PageTitle";
 import PageContent from "../../components/ProjectContent";
 import { generateProjectImages } from "../../utils/imageUtils";
+import { baseTitle } from "../../utils/data-common";
 
 type Props = {
 	item?: Project & { images?: { src: string; alt: string; id: string }[] };
@@ -15,6 +22,7 @@ type Props = {
 const ProjectDetailPage = ({ item }: Props) => {
 	const { language } = useLanguage();
 	const projectData = language === "fr" ? projectDataFr : projectDataEn;
+	const nav = language === "fr" ? navFr : navEn;
 
 	if (!item) return null;
 
@@ -30,7 +38,10 @@ const ProjectDetailPage = ({ item }: Props) => {
 		: item;
 
 	return (
-		<Layout title={`projets > ${translatedItem.title}`} baseTitle="pierre">
+		<Layout
+			title={`${nav.projects} > ${translatedItem.title}`}
+			baseTitle={baseTitle}
+		>
 			<PageTitle title={translatedItem.title} />
 			<PageContent
 				item={translatedItem}

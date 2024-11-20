@@ -31,10 +31,24 @@ export interface AboutData {
 export interface NavigationLabels {
 	home: string;
 	about: string;
+	projects: string;
 }
 
 export interface ProjectLabels {
 	tools: string;
 	technologies: string;
 	duration: string;
+}
+
+export interface CommonMetadata {
+	baseTitle: string;
+	siteUrl: string;
+	author: string;
+}
+
+export interface SiteMetadata extends CommonMetadata {
+	title: string;
+	description: string;
+	locale: string;
+	keywords: string;
 }

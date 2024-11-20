@@ -3,11 +3,14 @@ import type {
 	AboutData,
 	NavigationLabels,
 	ProjectLabels,
+	SiteMetadata,
 } from "../interfaces";
+import { commonMetadata } from "./data-common";
 
 export const navigationLabels: NavigationLabels = {
 	home: "accueil",
 	about: "à propos",
+	projects: "projets",
 };
 
 export const aboutData: AboutData = {
@@ -159,3 +162,12 @@ export const sampleProjectData: Project[] = [
 		images: [],
 	},
 ];
+
+export const siteMetadata: Omit<SiteMetadata, keyof typeof commonMetadata> = {
+	title: "pierre",
+	description:
+		"Portfolio de Pierre Roussel, développeur web et graphiste. Création de sites web dynamiques avec un focus sur le design et l'expérience utilisateur.",
+	locale: "fr_FR",
+	keywords:
+		"développeur web, graphiste, designer, frontend, backend, portfolio, react, typescript, nextjs",
+};
