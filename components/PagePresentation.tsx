@@ -4,9 +4,10 @@ import styles from "./PagePresentation.module.css";
 
 export interface PagePresentationProps {
 	description: string;
-	additionalInfo?: string;
-	layout?: "row" | "column";
+	additionalInfo: string;
+	layout: "row" | "column";
 	showCV?: boolean;
+	cvFile?: string;
 }
 
 const TextContent = ({ text }: { text: string }) => {
@@ -42,6 +43,7 @@ const PagePresentation = ({
 	additionalInfo,
 	layout = "column",
 	showCV = false,
+	cvFile = "cv_fr.pdf",
 }: PagePresentationProps) => (
 	<section className={`${styles.pagePresentation} ${styles[layout]}`}>
 		<p>
@@ -51,7 +53,7 @@ const PagePresentation = ({
 			<p>
 				<TextContent text={additionalInfo} />
 				{showCV && (
-					<Link href="/cv.pdf" target="_blank" rel="noreferrer">
+					<Link href={`/${cvFile}`} target="_blank" rel="noreferrer">
 						CV.
 					</Link>
 				)}
