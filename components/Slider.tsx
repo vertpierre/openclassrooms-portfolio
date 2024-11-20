@@ -77,7 +77,7 @@ const Slider = ({ images = [] }: SliderProps) => {
 					>
 						←
 					</button>
-					
+
 					<div className={styles.dots}>
 						{images.map((image) => (
 							<button

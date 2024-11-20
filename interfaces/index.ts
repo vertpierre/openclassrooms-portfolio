@@ -27,3 +27,14 @@ export interface AboutData {
 	description: string;
 	additionalInfo: string;
 }
+
+export interface NavigationLabels {
+	home: string;
+	about: string;
+}
+
+export interface ProjectLabels {
+	tools: string;
+	technologies: string;
+	duration: string;
+}

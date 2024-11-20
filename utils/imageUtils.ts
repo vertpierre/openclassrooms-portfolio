@@ -1,6 +1,6 @@
-// biome-ignore lint: 
+// biome-ignore lint:
 import { readdir, existsSync } from "fs";
-// biome-ignore lint: 
+// biome-ignore lint:
 import { join } from "path";
 
 interface ImageData {

@@ -1,6 +1,8 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import type { Project } from "../../interfaces";
-import { sampleProjectData } from "../../utils/data-fr";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { sampleProjectData as projectDataFr } from "../../utils/data-fr";
+import { sampleProjectData as projectDataEn } from "../../utils/data-en";
 import Layout from "../../components/Layout";
 import PageTitle from "../../components/PageTitle";
 import PageContent from "../../components/ProjectContent";
@@ -11,15 +13,29 @@ type Props = {
 };
 
 const ProjectDetailPage = ({ item }: Props) => {
+	const { language } = useLanguage();
+	const projectData = language === "fr" ? projectDataFr : projectDataEn;
+
 	if (!item) return null;
 
+	// Find the corresponding project in the current language
+	const currentItem = projectData.find((project) => project.slug === item.slug);
+
+	// Merge the static props images with the translated content
+	const translatedItem = currentItem
+		? {
+				...currentItem,
+				images: item.images,
+			}
+		: item;
+
 	return (
-		<Layout title={`projets > ${item.title}`} baseTitle="pierre">
-			<PageTitle title={item.title} />
+		<Layout title={`projets > ${translatedItem.title}`} baseTitle="pierre">
+			<PageTitle title={translatedItem.title} />
 			<PageContent
-				item={item}
-				description={item.description}
-				additionalInfo={item.additionalInfo}
+				item={translatedItem}
+				description={translatedItem.description}
+				additionalInfo={translatedItem.additionalInfo}
 				layout="column"
 			/>
 		</Layout>
@@ -29,7 +45,7 @@ const ProjectDetailPage = ({ item }: Props) => {
 export default ProjectDetailPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const paths = sampleProjectData.map((project) => ({
+	const paths = projectDataFr.map((project) => ({
 		params: { slug: project.slug },
 	}));
 
@@ -38,7 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const slug = params?.slug as string;
-	const item = sampleProjectData.find((data) => data.slug === slug);
+	const item = projectDataFr.find((data) => data.slug === slug);
 
 	if (!item) {
 		return {
@@ -47,8 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}
 
 	const images = await generateProjectImages(item.slug);
-	
-	// Map images to include src, alt, and unique id
+
 	const imageData = images.map((img, index) => ({
 		src: img.src,
 		alt: `${item.title} - Image ${index + 1}`,
@@ -59,7 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		props: {
 			item: {
 				...item,
-				images: imageData, // Updated to include objects with src, alt, id
+				images: imageData,
 			},
 		},
 	};

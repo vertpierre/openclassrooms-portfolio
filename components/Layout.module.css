@@ -27,3 +27,9 @@
 	height: 100vh;
 	gap: 0;
 }
+
+.controls {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}

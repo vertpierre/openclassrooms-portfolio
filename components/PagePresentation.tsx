@@ -1,22 +1,22 @@
-import Link from 'next/link';
-import { parseText } from '../utils/textUtils';
-import styles from './PagePresentation.module.css';
+import Link from "next/link";
+import { parseText } from "../utils/textUtils";
+import styles from "./PagePresentation.module.css";
 
 export interface PagePresentationProps {
 	description: string;
 	additionalInfo?: string;
-	layout?: 'row' | 'column';
+	layout?: "row" | "column";
 	showCV?: boolean;
 }
 
 const TextContent = ({ text }: { text: string }) => {
 	const segments = parseText(text);
-	
+
 	return (
 		<>
 			{segments.map((segment) => {
 				switch (segment.type) {
-					case 'link':
+					case "link":
 						return (
 							<Link
 								key={segment.id}
@@ -27,7 +27,7 @@ const TextContent = ({ text }: { text: string }) => {
 								{segment.content}
 							</Link>
 						);
-					case 'linebreak':
+					case "linebreak":
 						return <br key={segment.id} />;
 					default:
 						return <span key={segment.id}>{segment.content}</span>;
@@ -40,7 +40,7 @@ const TextContent = ({ text }: { text: string }) => {
 const PagePresentation = ({
 	description,
 	additionalInfo,
-	layout = 'column',
+	layout = "column",
 	showCV = false,
 }: PagePresentationProps) => (
 	<section className={`${styles.pagePresentation} ${styles[layout]}`}>
