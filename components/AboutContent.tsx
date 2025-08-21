@@ -15,7 +15,7 @@ const AboutContent = ({
 	showCV,
 }: AboutContentProps) => {
 	const { language } = useLanguage();
-	const cvFileName = language === "en" ? "cv_en.pdf" : "cv_fr.pdf";
+	const cvFileName = language === "en" ? "cv_en.pdf" : "cv_pierre_roussel_2025_alternance_master.pdf";
 
 	return (
 		<div className={styles.container}>

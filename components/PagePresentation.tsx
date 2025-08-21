@@ -43,7 +43,7 @@ const PagePresentation = ({
 	additionalInfo,
 	layout = "column",
 	showCV = false,
-	cvFile = "cv_fr.pdf",
+	cvFile = "cv_pierre_roussel_2025_alternance_master.pdf",
 }: PagePresentationProps) => (
 	<section className={`${styles.pagePresentation} ${styles[layout]}`}>
 		<p>
